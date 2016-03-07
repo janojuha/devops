@@ -1,9 +1,14 @@
 var request = require("request"),
     assert = require('assert'),
-    appUnderTest = require("../hello.js"),
-    base_url = "http://localhost:6001/";
+    appUnderTest = require("../hello.js");
+var cfenv = require('cfenv');
+var appEnv = cfenv.getAppEnv();
+var   base_url = "http://localhost: "+appEnv.port;
+	
 
-describe("/ URL responses without error", function() {
+
+
+describe("/ URL responses without error targeting port: " +appEnv.port , function() {
   describe("GET /", function() {
     it("returns status code 200", function(done) {
       request.get(base_url, function(error, response, body) {

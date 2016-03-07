@@ -23,7 +23,6 @@ app.get('/', function (req, res){
 });
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
-appEnv.port = 6001; //I want the app listen on this port 
 
 // start server on the specified port and binding host
 app.listen(appEnv.port, appEnv.bind, function() {
