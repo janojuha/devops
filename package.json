@@ -1,0 +1,25 @@
+{
+  "name": "devopsexample",
+  "version": "1.0.0",
+  "description": "example for devops",
+  "main": "hello.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "cfenv": "^1.0.0",
+    "express": "^4.12.4",
+    "request": "^2.69.0",
+	"assert": "^2.11.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git repo"
+  },
+  "keywords": [
+    "devops",
+    "example"
+  ],
+  "author": "Janos Juhasz",
+  "license": "ISC"
+}
