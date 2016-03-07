@@ -16,5 +16,13 @@ gulp.task('mocha-test', function() {
        junit_report_path: 'test/mocha-report.xml',
        junit_report_stack: 1
      }
-   }));
+   }))
+   .once('error', function () {
+            process.exit(1);
+        })
+   .once('end', function () {
+            process.exit();
+        });
 });
+
+

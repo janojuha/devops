@@ -5,6 +5,7 @@ var cfenv = require('cfenv');
 var appEnv = cfenv.getAppEnv();
 var base_url = "http://localhost:"+appEnv.port;
 var request = require("request");
+var appUnderTest = require("../hello.js");
 
 chai.config.includeStack = false;
 
@@ -21,7 +22,9 @@ describe("/ URL responses without error targeting port: " +appEnv.port , functio
       request.get(base_url, function(error, response, body) {
 		expect(body).to.be.equal("<html><head></head><body><h1>Test ok</h1></body></html>");
         done();
+		
       });
     });
   });
+  
 });
