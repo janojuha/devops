@@ -4,7 +4,8 @@
   "description": "example for devops",
   "main": "hello.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+	"start": "node hello.js"
   },
   "dependencies": {
     "cfenv": "~1.0.0",
